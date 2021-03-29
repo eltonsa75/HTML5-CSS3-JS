@@ -44,8 +44,12 @@ renderizada-->
                 transform: translateX(30px);
                 background: red;
             }
+
+            label input:focus + span{
+                box-shadow: 0 0 0 1px red;
+            }
             input {
-                visibility: hidden;
+               opacity: 0;
                 width: 1px;
                 height: 1px;
                 overflow: hidden;

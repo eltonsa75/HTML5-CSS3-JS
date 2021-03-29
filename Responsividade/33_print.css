@@ -5,7 +5,7 @@ body{
 }
 
 a::after{
-    content: "( " attr(href)" ) ";
+    content: attr(href);
     display: inline-block;
     margin: 0 10px;
 }

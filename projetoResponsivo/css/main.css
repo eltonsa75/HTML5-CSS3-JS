@@ -8,8 +8,8 @@ h1, h2, h3, h4, h5, h6{
     font-family: "Oxygen";
 }
 
-.clearfix:after .row:after{
-    content: '';
+.clearfix:after, .row:after{
+    content: ' ';
     display: block;
     clear: both;
 }
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6{
 .top-nav a{
     color: white;
     text-decoration: none;
-    padding: .1em;
+    padding: 1em;
     display: block;
 }
 
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .middle-content p{
-    line-height: 1.5;
+    line-height: 1.5em;
     color: #222;
 }
 
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .main-content p{
-    line-height: 1.5;
+    line-height: 1.5em;
 }
 
 .main-content-article{
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6{
 
 .footer-menushare{
     background: #303d4c;
-    padding: .5em;
+    padding: 5em;
 }
 
 .footer-menushare li{
@@ -210,4 +210,31 @@ h1, h2, h3, h4, h5, h6{
         height: 15em;
         padding-top: 15em;
     }
+}
+
+
+@media screen and (min-width: 64em){
+    .top-content{
+        background-image: url(../images/bg_topo_1600x1374.jpg);
+        padding: 19em 20em 10em;
+        background-position: center top;
+    }
+
+    .col-1_4{
+        width: 23%;
+        margin: 1%;
+    }
+
+    .col-1_2{
+        width: 48%;
+        margin: 1%;
+        float: left;
+    }
+
+    .main-content-article .button{
+        float: none;
+    }
+
+        
+
 }

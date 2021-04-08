@@ -49,8 +49,57 @@
            align-content: center;
         }
         .flexbox:nth-child(8) div {
-           width: 70px;
+           width: 100px;
         }
+
+        .flexbox:nth-child(9) {
+           justify-content: center;
+           align-items: center;
+        }
+
+        .flexbox:nth-child(9) div {
+           width: 100px;
+           background: yellow;
+           flex-basis: 50px;
+           height: 50px;
+        }
+
+        .flexbox:nth-child(10) {
+           justify-content: center;
+           align-items: center;
+        }
+
+        .flexbox:nth-child(10) div {
+           width: 100px;
+           background: yellow;
+           flex-basis: 50px;
+           height: 50px;
+        }
+
+        .flexbox:nth-child(10) div:nth-child(2){
+            flex-grow: 1;
+        }
+
+        .flexbox:nth-child(10) div:nth-child(4){
+            flex-grow: 1;
+        }
+
+        .flexbox:nth-child(11) div {
+           width: 100px;
+           background: yellow;
+           flex-basis: 100px;
+           height: 50px;
+           margin: 5px;
+        }
+
+        .flexbox:nth-child(11) div:nth-child(2){
+            flex-shrink: 2;
+        }
+
+        .flexbox:nth-child(11) div:nth-child(4){
+            flex-shrink: 1;
+        }
+
     </style>
 </head>
 <body>
@@ -82,6 +131,27 @@
     <div class="flexbox">
         <div class="div1">1</div>
         <div class="div1" style="font-size: 4em;">2</div>
+        <div class="div1">3</div>
+        <div class="div1">4</div>
+    </div>
+
+    <div class="flexbox">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
+        <div class="div1">3</div>
+        <div class="div1">4</div>
+    </div>
+
+    <div class="flexbox">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
+        <div class="div1">3</div>
+        <div class="div1">4</div>
+    </div>
+
+    <div class="flexbox">
+        <div class="div1">1</div>
+        <div class="div1">2</div>
         <div class="div1">3</div>
         <div class="div1">4</div>
     </div>

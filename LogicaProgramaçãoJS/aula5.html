@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:: Aula 01 de Logica JS</title>
+    <title>:: Aula 05 de Logica JS</title>
 </head>
 <body>
     <h1>
@@ -20,20 +20,20 @@
         //pedir para o usuário digitar outro numero
         var n2 = prompt("Digite outro número");
         //converter em numero inteiro
-        n2 = parseInt(n2);
-
-        var divisao = n1 / n2
-
+        n2 = parseInt(n2);        
         /*
         mostrar num alert o seguinte texto
         o resto da divisão de (n1) por (n2) é: (resultado);
         */
-
+            var resto = n1 % n2
+        alert("o resto da divisão de " + n1 + " por "+ n2 +" é: " + resto)
         /*
         mostrar num alert o seguinte texto
         o numero (n1) elevado a (n2) é: (resultado);
         */
-     
+            var elevado = n1 ** n2
+        alert("o número " + n1 + " elevado a "+ n2 +" é: " + elevado)
+
 
     </script>
 </body>

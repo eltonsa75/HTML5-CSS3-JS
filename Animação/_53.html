@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Página de exemplo estrutura básica ::</title>
+
+    <style>
+        @keyframes slide{
+            0%{
+                transform: translateY(0);
+            }
+
+            100%{
+                transform: translateY(-150vh);
+            }
+        }
+        body{
+            font-family: sans-serif;
+            color: white;
+            background: #1a1818;
+            margin: 0;
+        }
+
+        #slide-externo{
+            width: 80vw;
+            height: 50vh;
+            border: 10px solid white;
+            box-shadow: 0 0 10px black;
+            margin-left: 10vw;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        #slide-interno{
+            width: 100%;
+            animation: slide 5s;
+        }
+
+        #slide-interno img{
+            display: block;
+            height: 50vh;
+            width: 100%;
+            /* object-fit: cover; */
+        }
+
+    </style>
+</head>
+<body>
+   <h2>Animation - slideshow</h2>
+
+   <div id="slide-externo">
+       <div id="slide-interno">
+           <img src="imagens/slide1.jpg" alt="dog 1">
+           <img src="imagens/slide2.jpg" alt="dog 2">
+           <img src="imagens/slide3.jpg" alt="dog 3">
+           <img src="imagens/slide4.jpg" alt="dog 4">
+       </div>
+   </div>
+    
+</body>
+</html>

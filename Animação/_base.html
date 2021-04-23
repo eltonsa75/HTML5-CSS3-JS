@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Página de exemplo estrutura básica ::</title>
+    
+    <style>
+
+        @keyframes anda {
+            0%{
+                transform: translateX(0);
+            }
+
+            100%{
+                transform: translateX(400px);
+            }
+        }
+
+       #anima-time div{
+           width: 50px;
+           height: 25px;
+           border: 3px solid red;
+       }
+
+       #anima-time div:nth-child(1){
+         /* animation-name: anda;
+         animation-duration: 2s;
+         animation-timing-function: ease-in-out;
+         
+         */
+         animation: anda 2s ease-in-out;
+       }
+
+       #anima-time div:nth-child(2){
+        animation-name: anda;
+        animation-duration: 2s;
+        animation-iteration-count: 3;
+       }
+    </style>
+</head>
+<body>
+    <h2>Animation</h2>
+    <div id="anima-time">
+
+        <div>1 </div>
+        <div>2 </div>
+
+    </div>
+</body>
+</html>

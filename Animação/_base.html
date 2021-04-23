@@ -68,10 +68,21 @@
         animation-iteration-count: 2;
         animation-direction: alternate;
         animation-fill-mode: backwards;
-        
+       }
+       #anima-time div:nth-child(5){    
 
-        
-        
+        background: red;    
+        animation-name: anda;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;      
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+        animation-play-state: running;
+       }
+
+       #anima-time div:nth-child(5):hover{
+           animation-play-state: paused;
        }
     </style>
 </head>
@@ -83,6 +94,7 @@
         <div>2 </div>
         <div>3 </div>
         <div>4 </div>
+        <div>5 </div>
 
     </div>
 </body>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:: Aula 01 de Logica JS</title>
+    <title>:: Aula 08 de Logica JS</title>
 </head>
 <body>
     <h1>
@@ -13,14 +13,36 @@
 
     <script>
         // fazer jogador1 digitar um numero
-
+        var nJogador1 = prompt('Número do Jogador 1');
+        nJogador1 = parseInt(nJogador1);
         //fazer o jogador2 digitar outro numero
-
+        var nJogador2 = parseInt(prompt('Número do Jogador 2'));
         //se forem iguais, mostrar mensagem 'empate'
 
-        //se o numero sorteado for 0, ganha que escolher o numero MENOR
-
-        //se o numero sorteado for 1, ganha que escolher o numero Maior
+        if(nJogador1 === nJogador2){
+            alert('Vocês empataram');
+        } else {
+            //sortear um numero entre 0 e 1
+            var nSorteado = parseInt(Math.random() * 2);
+            //se o numero sorteado for 0, ganha que escolher o numero MENOR
+            
+            if(nSorteado === 0){
+                if(nJogador1 < nJogador2){
+                    alert('ganhou o jogador 1');
+                } else {
+                alert('ganhou o jogador 2');
+                }
+                //se o numero sorteado for 1, ganha que escolher o numero Maior
+            } else {
+                if(nJogador1 > nJogador2){
+                    alert('Ganhou o jogador 1');
+                } else {
+                    alert('Ganhou o jogador 2');
+                }
+            }
+            
+        }
+        
      
 
     </script>

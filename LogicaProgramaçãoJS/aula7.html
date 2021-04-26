@@ -12,7 +12,23 @@
     </h1>
 
     <script>
-        
+        var n1 = prompt('digite um número');
+        n1 = parseFloat(n1);
+
+        var n2 = parseFloat(prompt('Digite outro número'));
+
+        var media = (n1 + n2) /2;
+
+        alert(media > 5);
+
+        if(media > 5){
+            //bloco verdade
+            alert("Parabéns! você foi aprovado");
+        } else {
+            // bloco mentira
+            alert("Desculpe, mas não foi dessa vez");
+        }
+
     </script>
 </body>
 </html>

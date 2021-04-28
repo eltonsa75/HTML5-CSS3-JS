@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Aula 15 de Logica JS</title>
+</head>
+<body>
+    <h1>
+        Lógiva de pogramação com JavaScript
+    </h1>
+
+    <script>
+ /*        Para este exercício, mostre na tela todos os anos a partir de 1004 até o ano 2017,
+        pulando de quatro em quatro anos.
+
+        Por exemplo:
+
+        1004
+
+        1008
+
+        1012
+
+        E assim por diante.
+
+        É como mostrar os anos bissextos, mas sem as regras para descobrir se um ano é bissexto ou não.
+        (vamos imaginar que se o ano é múltiplo de quatro, ele é bissexto). */
+        
+        
+        var numero = prompt('Digite um número');
+     numero = parseFloat(numero);
+
+     for(var i = 1; i <= 1000; i++){
+         document.write( numero + ' X '+ i +' = '+ (numero * i) +' <br>');
+     }
+
+     document.write('saiu do loop');
+
+
+    </script>
+</body>
+</html>

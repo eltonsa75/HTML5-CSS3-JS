@@ -29,7 +29,9 @@
             //enquanto indice for <= 1000
                 //concatena na variavel mensagem
             while(i <= 1000){
-                mensagem += 'n X i = x*i <br>';
+                mensagem += n + ' X '+ i +' = '+ (n*i) +' <br>';
+                // para não ficar no loop infinito
+                i++;
             }
             //mostra mensagem no output
             output.innerHTML = mensagem
@@ -37,10 +39,7 @@
         
         var output = document.querySelector('#output'); 
         
-        var mensagem = '';
-        
-        
-            
+        var mensagem = '';            
             output.innerHTML = mensagem;
 
 

@@ -15,9 +15,15 @@
 
     <script>
 
-       var output = document.querySelector('#output');         
+       var output = document.querySelector('#output'); 
+       
+       var mensagem = '';
+       for(var i = 0; i< 1001; i++){
+           
+           mensagem += 'i: ' + i + '<br>';
+       }
         
-        output.innerHTML = "texto inserido por javascript"
+        output.innerHTML = mensagem;
 
 
     </script>

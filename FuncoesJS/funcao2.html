@@ -20,16 +20,19 @@
 
         function mostrarTabuada(){
             //perguntar o numero para o usuário
-            
+            var n = prompt('Digite um número');
             //converter o numero
+            n = parseFloat(n);
 
             //criar uma variavel que servira de indice
-
+            var i = 1;
             //enquanto indice for <= 1000
                 //concatena na variavel mensagem
-
+            while(i <= 1000){
+                mensagem += 'n X i = x*i <br>';
+            }
             //mostra mensagem no output
-
+            output.innerHTML = mensagem
         }
         
         var output = document.querySelector('#output'); 

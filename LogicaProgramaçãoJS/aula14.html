@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Aula 01 de Logica JS</title>
+</head>
+<body>
+    <h1>
+        Lógiva de pogramação com JavaScript
+    </h1>
+
+    <script>
+
+        /*
+        Bom, para o WHILE rodar é necessário que a condição seja sempre verdadeira.
+        Logo, se ela for inicialmente FALSE, o looping while nunca irá rodar.
+        Já o DO WHILE vai rodar sempre, ao menos uma vez,
+        mesmo que a condição existente no WHILE seja falsa (se for falsa, vai rodar só uma vez e termina).
+        
+        */
+        
+     var numero = prompt('Digite um número');
+     numero = parseFloat(numero);
+
+     var indice = 1001;
+
+     do {
+         document.write( numero + ' X ' + indice +' = '+ (numero * indice) +' <br>');
+         indice = indice + 1;
+     } while(indice <= 1000)
+     document.write('saiu do loop');
+
+
+    </script>
+</body>
+</html>

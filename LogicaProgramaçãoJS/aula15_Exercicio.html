@@ -27,16 +27,14 @@
 
         É como mostrar os anos bissextos, mas sem as regras para descobrir se um ano é bissexto ou não.
         (vamos imaginar que se o ano é múltiplo de quatro, ele é bissexto). */
-        
-        
-        var numero = prompt('Digite um número');
-     numero = parseFloat(numero);
 
-     for(var i = 1; i <= 1000; i++){
-         document.write( numero + ' X '+ i +' = '+ (numero * i) +' <br>');
-     }
+        
+        var ano = 1004;
 
-     document.write('saiu do loop');
+        while(ano <= 2017){
+            document.write(ano + '<br>');
+            ano += 4;
+        }
 
 
     </script>

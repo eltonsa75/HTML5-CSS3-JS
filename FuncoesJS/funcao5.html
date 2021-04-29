@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:: Aula 03 de Função JS</title>
+    <title>:: Aula 05 de Função JS</title>
 </head>
 <body>
     <h1>
@@ -26,15 +26,30 @@
         escrever();
 
         function escrever(){
-            var output = '';
+            var output = 
             document.querySelector('#output');
             output.innerHTML = n1;
         }
 
-        function calcular(){
+        function calcular(simbolo){
             var n = prompt('Digite outro numero');
             n = parseFloat(n);
-            n1 += n;
+            //n1 += n;
+
+            switch(simbolo){
+                case '+':
+                    n1 += n;
+                    break;
+                case '-':
+                    n1 -= n;
+                    break;
+                case '*':
+                    n1 *= n;
+                    break;
+                case '/':
+                    n1 /= n;
+
+            }
             escrever();
         }
         

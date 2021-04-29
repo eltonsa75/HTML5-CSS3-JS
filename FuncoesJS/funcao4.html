@@ -11,7 +11,7 @@
         Lógiva de pogramação com JavaScript
     </h1>
 
-    <button onclick="mostrarArea()">Mostrar Area</button>
+    <button onclick="mostrarArea(largura, altura)">Mostrar Area</button>
 
     <script>
         var largura = prompt('Digite a largura');
@@ -22,8 +22,9 @@
         altura = parseFloat(altura);
 
 
-        function mostrarArea(){
-            
+        function mostrarArea(l, a){
+            alert('recebendo o parametro L ' + l);
+            alert('recebendo o parametro A ' + a);
         }
 
      

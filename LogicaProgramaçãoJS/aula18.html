@@ -44,6 +44,16 @@
 
 
      function calcular(simbolo, n1, n2){ 
+
+        if(simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/'){
+            alert('digite um simbolo valido')
+            return 0;
+        }
+
+        if( isNaN(n1) || isNaN(n2) ) {
+            alert('chama passando somente números')
+            return 0;
+        }
          
         var numeroCalculado = null;
 

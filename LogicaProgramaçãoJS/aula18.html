@@ -16,6 +16,8 @@
     <button onclick="iniciarCalculo('*')">*</button>
     <button onclick="iniciarCalculo('/')">/</button>
 
+    <div id="output"></div>
+
     <script>
         
      var n2 = prompt('digite um numero');
@@ -30,11 +32,12 @@
          n2 = parseFloat(n2);
 
          var msg = calcular(simbolo, n1, n2);
+
+         escreve(msg);
      }
 
      function escreve(mensagem){
-         var output =
-         document.querySelector('#output');
+         var output = document.querySelector('#output');
          output.innerHTML = mensagem;
      }
 

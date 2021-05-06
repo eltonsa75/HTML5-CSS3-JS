@@ -5,3 +5,5 @@ Verá conceitos avançados de HTML, incluindo semântica e uma introdução ao S
 Já com relação ao CSS você verá em detalhes todas as propriedades necessárias para criar layouts de páginas e sites na web. Iremos também desenvolver um projeto responsivo, ou seja, que funciona bem em todos os dispositivos, mobiles, tablets e desktop.
 
 Dará os primeiros passos com Javascript e descobrirá o poder dessa linguagem, que atualmente é a mais utilizada entre os desenvolvedores web.
+
+

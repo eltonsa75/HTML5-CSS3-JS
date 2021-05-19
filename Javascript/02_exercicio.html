@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:: Aula 01 de JavaScript</title>
+    <title>:: Aula 02 de JavaScript</title>
 </head>
 <body>
     <h1>
@@ -20,14 +20,21 @@
         */
 
        (function(){
-            function calcularIMC(peso, altura){
-                return peso / (altura * altura);
+            function calcularIMC(peso, altura, callback){
+                var imc =  peso / (altura * altura);
+
+                // verificando se é uma função
+                if(callback && typeof callback === 'function'){
+                    return callback(imc)
+                }
+                console.log('não passou callback')
+                return imc;
             }
 
             function classificaIMC(imc){
 
                 if(imc <= 16.9 ){
-                return 'muito abaixo';
+                return 'muito abaixo do peso';
             } else if (imc <= 18.4){
                 return 'abaixo do peso'
             } else if(imc <= 24.9){
@@ -46,17 +53,10 @@
          var peso = 65;
          var altura = 1.75;
 
-         var imc = calcularIMC(peso, altura);
-         var classificacao = classificaIMC(imc);
-
-         console.log('Classificação IMC: ', classificaIMC);
+         var imc = calcularIMC(peso, altura, classificaIMC);
+         console.log('Classificação IMC: ', imc);
 
        })()
-
-
-
-
-    
 
     </script>
 </body>

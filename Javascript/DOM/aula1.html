@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>:: Aula 01 de JavaScript</title>
+
 </head>
 <body>
     <h1>
@@ -12,7 +13,7 @@
     </h1>
     <main class="cmain" id="idman">
         <h2>subtitulo</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p id="pmain" class="pmain">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </main>
 
     <section class="csection" id="idsection">
@@ -22,8 +23,7 @@
     </section>
 
     <script>
-    
-
+        document.querySelector('h1').textContent = 'Paragrafo alterado via JavaScript';
     </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>:: Aula 02 de JavaScript</title>
+    <title>:: Aula 03 de JavaScript</title>
 
 </head>
 <body>
@@ -12,19 +12,24 @@
        Curso JavaScritp Completo 2020
     </h1>
 
+    <input type="text" id="txtNome" value="digite">
+    <button onclick="escreve()">Só clica</button>
     <div id="msg"></div>
+
 
     <script>
     /* 
         Mostrar na tela (div com um #msg) uma mensagem de boas-vindas, Exemplo: Bem-vindo, Daniel!.
         O nome do usuário pode ser uma variável cujo valor foi digitado pelo prompt() 
     */ 
-        (function(){
-            var nome = prompt('qual seu nome');
-            document.querySelector('#msg').textContent = "Bem Vindo, " + nome;
-            
-        })()
+        
+            var txtNome2 = document.querySelector('#txtNome');
 
+            function escreve(){
+                var nome = txtNome2.value;
+                document.querySelector('#msg').innerHTML = "Bem Vindo, <strong>" + nome + "</strong>";                    
+            }
+  
     </script>
 </body>
 </html>

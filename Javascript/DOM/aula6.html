@@ -22,19 +22,23 @@
     var hoje = new Date();
 
     var x = [0];
-
     function mudaX(x){
         var y = x;
         y.push(2);
         x.push(3);
-        console.log('MudaX: ');
-        console.log(x);
-        console.log(y);
+    
     }
 
     mudaX(x);
-    console.log('x: ');
-    console.log(x);
+    console.log('----------');
+
+    var n = 0;
+    function mudaN(n){
+        var n2 = n;
+        console.log(++n2);
+    }
+    mudaN(n)
+    console.log(n);
 
     </script>
 </body>

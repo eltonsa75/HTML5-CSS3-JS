@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>:: Aula 03 de JavaScript 2020</title>
-
+    
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <script src="beluga.js"></script>
 
 </head>
 <body>
@@ -18,7 +19,7 @@
     <section>
         <div class="container">
         <h2>Média dos alunos</h2>
-        <table class="table">
+        <table class="table js-tabela">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -81,7 +82,35 @@
 
     <script>
 
-    
+    (function(){
+        var trs = document.querySelectorAll('.js-tabela tbody .aluno');
+
+        var x = 0;
+        while(trs[x]){
+            var linhaAluno = trs[x];
+            console.log(linhaAluno);
+
+            var n1, n2, n3, n4, media;
+
+            var tds = linhaAluno.querySelectorAll('td');
+            console.log(tds);
+
+            n1 = pegaNota(tds[1]);
+            n2 = pegaNota(tds[2]);
+            n3 = pegaNota(tds[3]);
+            n4 = pegaNota(tds[4]);
+
+            media = calcularMedia(n1, n2, n3, n4);
+
+            linhaAluno.querySelector('.aluno-m').textContent = media
+
+            x++;
+        }
+
+        function pegaNota(td){
+            return parseFloat(td.textContent);
+        }
+    })()
 
     </script>
 </body>

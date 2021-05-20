@@ -83,6 +83,7 @@
     <script>
 
     (function(){
+        'use strict'
         var trs = document.querySelectorAll('.js-tabela tbody .aluno');
 
         var x = 0;
@@ -91,14 +92,10 @@
             console.log(linhaAluno);
             
             var tds = linhaAluno.querySelectorAll('td');
-            console.log(tds);
-            
-            var notas = recuperarNumerosDeColunas(tds);            
-               
-            media = calcularMedia.apply(this, notas);            
-
-            linhaAluno.querySelector('.aluno-m').textContent = media
-
+            console.log(tds);            
+            var notas = recuperarNumerosDeColunas(tds);        
+            var media = calcularMedia.apply(this, notas); 
+            linhaAluno.querySelector('.aluno-m').textContent = media;
             x++;
         }
 
@@ -112,11 +109,6 @@
                 x++;
             }
             return arr;
-        }
-
-
-        function pegaNota(td){
-            return parseFloat(td.textContent);
         }
     })()
 

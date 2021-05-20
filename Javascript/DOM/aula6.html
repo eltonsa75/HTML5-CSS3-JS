@@ -42,13 +42,22 @@
 
     console.log('--------------');
 
+    function mudaCor(cor){
+        console.log(this);
+        this.cor = cor;
+    }
+
     //Objeto literal
     var caneta1 = {
         cor: 'red',
-        mudarCor: function(cor){
-            this.cor = cor;
-        }
+        preco: 1,
+        mudarCor: mudaCor
     }
+
+    caneta1.mudarCor('green');
+    console.log(caneta1);
+
+    var caneta3 = new Caneta()
 
     </script>
 </body>

@@ -33,8 +33,10 @@
                     var $txtPass = document.getElementById('txtPass');
                     var $btn = document.getElementById('btn');
 
-                    $btn.addEventListener('click', function(){
-                        alert('clicou no btn');
+                    $btn.addEventListener('click', function(){                
+                        if(!$txtUser.value || !$txtPass.value ){
+                            alert('Preencha todos campos');
+                        }
                     });
             })()
     </script>

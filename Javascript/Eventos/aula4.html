@@ -17,20 +17,22 @@
              Curso JavaScript Completo 2021
         </h1>
 
-        <textarea id="msg" cols="50" rows="10" maxlength="100"></textarea>
-        Restam <span id="resta"></span> caracteres
+        <textarea id="msg" cols="50" rows="10" maxlength="10"></textarea>
+        <div id="restaContainer" style="display: none;">Restam <span id="resta"></span> caracteres</div>
         
     </div>
     <script>       
     
             (function(){
                 'use strict';
-                var maxima = 100;
-                  
                 var $txtMsg = document.getElementById('msg');
+                var $restaContainer = document.getElementById('restaContainer');
                 var $resta = document.getElementById('resta');
+                var maxima = $txtMsg.maxLength;                  
 
                 $resta.textContent = maxima;
+
+                $restaContainer.style.display = 'block';
 
                 $txtMsg.addEventListener('input', checkLength);
 

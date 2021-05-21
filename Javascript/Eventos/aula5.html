@@ -41,7 +41,7 @@
                var  $btn = document.getElementById('btn');
                var  $chk = document.getElementById('chk');
 
-               $btn.disabled = toggleBtn();
+             toggleBtn();
 
                $chk.addEventListener('change', function(){
                 //    if(this.checked){
@@ -49,11 +49,11 @@
                 //    } else {
                 //        $btn.disabled = true;
                 //    }
-                   $btn.disabled = toggleBtn();
+              toggleBtn();
                });
 
                function toggleBtn(){
-                   return !$chk.checked;
+                $btn.disabled = !$chk.checked;
                }
 
             })()

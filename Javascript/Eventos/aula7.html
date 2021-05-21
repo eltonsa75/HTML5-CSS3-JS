@@ -54,9 +54,15 @@
 
                $ul.addEventListener('click', function (e){
                    if(e.target.nodeName === 'LI'){
-                       toogleDone(e.target)
+                       removeTask(e.target);
                    }
                })
+
+               function removeTask(li){
+                   if(confirm('deseja realmente excluir a tarefa \n ' + li.textContent +'?')){
+                        li.parentNode.removeChild(li);
+                   }
+               }
 
                function toogleDone(li){
                 li.classList.toggle('done');

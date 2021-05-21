@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Aula 01 de JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+             Curso JavaScritp Completo 2021
+        </h1>
+
+        <button id="btn1" onclick="clicar()">botão 1</button>
+        <button id="btn2">botão 2</button>
+        <button id="btn3">botão 3</button>
+    
+    </div>
+
+
+    <script>
+
+        // Dom level zero
+
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+
+        btn2.onclick = clicar;
+
+        function clicar()
+            {
+               alert('clicou') ;
+            }
+        // Dom level  2
+            btn3.addEventListener("click", function(){
+                alert('clicou com dom level 2');
+            });
+
+            btn3.addEventListener("click", function(){
+                alert('clicou com dom level2 com outro evento 2');
+            });
+    </script>
+</body>
+</html>

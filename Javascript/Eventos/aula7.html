@@ -53,21 +53,30 @@
                })
 
                for(var i = 0; i < $lis.length; i++){
-                   $lis[i].addEventListener('click', toogleDone)
+                  addEvent($lis[i]);
                }
 
                function toogleDone(){
                  this.classList.toggle('done');
                }
 
-               function addTask(){
-                   var task = '<li>' + $txtTask.value + '</li>';                   
-                   $ul.innerHTML += task;
+               function addTask(){              
+                  
+                   var li = document.createElement('li');
+                   var text = document.createTextNode( $txtTask.value)
+
+                   li.appendChild(text);
+
+                   $ul.appendChild(li);
 
                    $txtTask.value = '';
                    $txtTask.focus();
+
+                   addEvent(li);
                }
-                    
+                    function addEvent(li){
+                        li.addEventListener('click', toogleDone)
+                    }
              
             })()
     </script>

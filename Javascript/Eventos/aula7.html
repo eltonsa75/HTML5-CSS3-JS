@@ -8,6 +8,14 @@
     
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+    <style>
+        .done{
+            text-decoration: line-through;
+            color: #555;
+
+        }
+    </style>
     
 
 </head>
@@ -33,7 +41,7 @@
                 'use strict';
 
                var $ul = document.querySelector('ul');
-               var $lis = $ul.querySelector('li')
+               var $lis = $ul.querySelectorAll('li');
                var $txtTask = document.querySelector('#txtTask');
                var $btn = document.querySelector('#btn');
 
@@ -49,7 +57,7 @@
                }
 
                function toogleDone(){
-                   
+                 this.classList.toggle('done');
                }
 
                function addTask(){

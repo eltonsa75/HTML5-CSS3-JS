@@ -6,4 +6,14 @@ Já com relação ao CSS você verá em detalhes todas as propriedades necessár
 
 Dará os primeiros passos com Javascript e descobrirá o poder dessa linguagem, que atualmente é a mais utilizada entre os desenvolvedores web.
 
+=======================================================================================================
+
+Number 
+
+Literais => var meuNum = 123
+
+Objetos => var meuNum = new Number("123")
+
+Possui métodos e propriedades:
+MAX-VALUE, MIN_VALUE, toFixed()
 

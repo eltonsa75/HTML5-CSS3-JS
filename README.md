@@ -17,3 +17,10 @@ Objetos => var meuNum = new Number("123")
 Possui métodos e propriedades:
 MAX-VALUE, MIN_VALUE, toFixed()
 
+=======================================================================================================
+
+Math 
+
+Possui métodos que nos auxiliam ao trabalhar com valores numéricos.
+
+Alguns deles: min(), max(), round(), floor(), ceil(), pow(), sqrt(), e random()

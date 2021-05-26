@@ -24,3 +24,13 @@ Math
 Possui métodos que nos auxiliam ao trabalhar com valores numéricos.
 
 Alguns deles: min(), max(), round(), floor(), ceil(), pow(), sqrt(), e random()
+
+=======================================================================================================
+
+Array e seu métodos
+
+Length, every(), filter(), forEach(), indexOf(), lastIndexOf(), map(), some()
+concat(), join(), pop(), push(), reduce() e reduceRight(), reverse(), shift()
+slice(), splice(), unshift(), toString().
+
+

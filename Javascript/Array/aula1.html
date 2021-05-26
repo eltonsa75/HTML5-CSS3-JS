@@ -13,7 +13,7 @@
 
     <script>
         
-            var arr = [1,2,3,4];
+            var arr = ['1', 20, 3, 4, 5, 'teste', 20, "30"];
 
             var sohNumeros = arr.every( function(el){
                
@@ -22,15 +22,28 @@
 
             console.log(sohNumeros);
 
-            var arr = [1,2,3,4];
-
             var aoMenosUmNumero = arr.some( function(el){
                
                 return typeof el === 'number';
             });
 
             console.log(aoMenosUmNumero);
-    
+
+            var numeros = arr.filter(function(el, i, arr){
+                return typeof el === 'number';
+            });
+            console.log(numeros);
+
+            arr.forEach(function(el, i, arr){
+                console.log('el=', el, ' | i=', i, ' | i - ', arr.toString());
+            })
+
+            var posicaoStr1 = arr.indexOf(20, 5);
+            console.log('posicaoStr1', posicaoStr1);
+
+            var posicaoStr2 = arr.lastIndexOf(20, 5);
+            console.log('posicaoStr2', posicaoStr2);
+
 
     </script>
 </body>

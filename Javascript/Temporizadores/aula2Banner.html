@@ -28,7 +28,7 @@
         Curso JavaScritp Completo 2020
     </h1>
     <div class="banner">
-        <button class="banner_close">x</button>
+        <button class="banner__close">x</button>
         <p>
             Silvio Santos Ipsum Boca sujuam... sem vergonhuamm. É com você Lombardiam. Patríciaaammmm... Luiz Ricardouaaammmmmm. Ma tem ou não tem o celular do milhãouamm? Estamos em ritmo de festamm. É bom ou não éam? Um, dois três, quatro, PIM, entendeuam?
     
@@ -49,12 +49,26 @@
                 var $bannerBtn = document.querySelector('.banner__close');
 
                 $bannerBtn.addEventListener('click', esconderBanner);
+
+
+                var intervaloEsconde = null;
+
                 function mostraBanner(){
                     $banner.style.display = 'block';
+
+                    intervaloEsconde = setTimeout(esconderBanner, 3000);
                 }
+
+
                 function esconderBanner(){
+                    $bannerBtn.removeEventListener('click', esconderBanner);
                     $banner.parentNode.removeChild($banner);
+
+                    clearInterval(intervaloEsconde);
                 }
+
+                setTimeout(mostraBanner, 3000);
+
             })()
     
 

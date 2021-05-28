@@ -6,68 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>:: Aula 01 de JavaScript</title>
 
-    <style>
-        .banner{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 0 1000px rgba(0,0,0,0);
-            display: none;
-        }
-
-        .banner__close{
-            position: absolute;
-            top: 5px;
-            right: 5px;
-        }
-    </style>
-</head>
+ </head>
 <body>
     <h1>
         Curso JavaScritp Completo 2020
     </h1>
-    <div class="banner">
-        <button class="banner__close">x</button>
-        <p>
-            Silvio Santos Ipsum Boca sujuam... sem vergonhuamm. É com você Lombardiam. Patríciaaammmm... Luiz Ricardouaaammmmmm. Ma tem ou não tem o celular do milhãouamm? Estamos em ritmo de festamm. É bom ou não éam? Um, dois três, quatro, PIM, entendeuam?
+    <div class="relogio">
     
-    Ha hai. Bem boladoam, bem boladoam. Bem gozadoam. Boca sujuam... sem vergonhuamm. Mah é a porta da esperançaam. Ma tem ou não tem o celular do milhãouamm? Um, dois três, quatro, PIM, entendeuam? É com você Lombardiam.
-    
-    Vem pra lá, mah você vai pra cá. Agora vai, agora vem pra láamm. O prêmio é em barras de ouro, que vale mais que dinheiroam. É fácil ou não éam? Valendo um milhão de reaisammm. Eu não queria perguntar isso publicamente, ma vou perguntar. Carla, você tem o ensino fundamentauam? Ma quem quer dinheiroam?
-    
-    Qual é a musicamm? Ma não existem mulher feiam, existem mulher que não conhece os produtos Jequitiamm. Ma vale dérreaisam? O arriscam tuduam, valendo um milhão de reaisuam. É fácil ou não éam? Ma quem quer dinheiroam?
-    
-    Ma vai pra lá. É com você Lombardiam. Ma! Ao adquirir o carnê do Baú, você estará concorrendo a um prêmio de cem mil reaisam. Ma quem quer dinheiroam? Mah roda a roduamm. Valendo um milhão de reaisammm.
-        </p>
+     
     </div>
 
     <script>
             (function(){
 
-                var $banner = document.querySelector('.banner');
-                var $bannerBtn = document.querySelector('.banner__close');
+                var $relogio = document.querySelector('.relogio');
 
-                $bannerBtn.addEventListener('click', esconderBanner);
+                function getHour(){
+                    var data = new Date();
+                    var h = formata(data.getHours());
+                    var m = formata(data.getMinutes());
+                    var s = formata(data.getSeconds());
 
+                    return h + ":" + m + ":" + s;
 
-                var intervaloEsconde = null;
-
-                function mostraBanner(){
-                    $banner.style.display = 'block';
-
-                    intervaloEsconde = setTimeout(esconderBanner, 3000);
                 }
 
-
-                function esconderBanner(){
-                    $bannerBtn.removeEventListener('click', esconderBanner);
-                    $banner.parentNode.removeChild($banner);
-
-                    clearInterval(intervaloEsconde);
+                function formata(t){
+                    return t < 10 ? "0" + t : t;
                 }
 
-                setTimeout(mostraBanner, 3000);
+                function mostraRelogio(atual){
+                    $relogio.textContent = atual;
+                }
+
+                mostraRelogio(getHour());                
+                
+                setInterval(function(){
+                    mostraRelogio(getHour());
+
+                }, 1000)
+                
 
             })()
     

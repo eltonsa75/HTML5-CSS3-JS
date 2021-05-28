@@ -34,3 +34,17 @@ concat(), join(), pop(), push(), reduce() e reduceRight(), reverse(), shift()
 slice(), splice(), unshift(), toString().
 
 
+========================================================================================================
+
+Temporizadores 
+
+setTimeout(fn, ms)
+setInterval(fn, ms)
+clearTimetout(id)
+clearInterval(id)
+
+Obs: Não são nativos da ECMAScript
+
+Em outras palavras, estão presente nos borwser "pendurados" em window.
+Não estão disponíveis no nodeJS.
+

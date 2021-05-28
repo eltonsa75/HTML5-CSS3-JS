@@ -43,8 +43,19 @@
     </div>
 
     <script>
-        
+            (function(){
 
+                var $banner = document.querySelector('.banner');
+                var $bannerBtn = document.querySelector('.banner__close');
+
+                $bannerBtn.addEventListener('click', esconderBanner);
+                function mostraBanner(){
+                    $banner.style.display = 'block';
+                }
+                function esconderBanner(){
+                    $banner.parentNode.removeChild($banner);
+                }
+            })()
     
 
     </script>

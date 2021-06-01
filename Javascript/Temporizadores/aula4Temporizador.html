@@ -30,11 +30,33 @@
             $pausar.addEventListener('click', pausar);   
             $parar.addEventListener('click', parar);
 
+            var intervalo = null;
             var msClickIniciar = 0;
+            var msClickPausar = 0;
+            var msTempoDecorrido = 0;
+            var rodando = false;
             
             function iniciar(){
                 msClickIniciar = Date.now();
                 iniciarCronometro();
+                rodando = true;
+            }
+            function pausar(){
+                if(rodando){
+                clearInterval(intervalo);  
+                msClickPausar = Date.now();
+                msTempoDecorrido += (msClickPausar - msClickIniciar);
+                rodando = false;
+                } else{
+                    msClickIniciar = Date.now();
+                    iniciarCronometro();
+                    rodando = true;
+                }
+
+            }
+
+            function parar(){
+
             }
 
             function iniciarCronometro(){
@@ -65,13 +87,6 @@
                 }
             }
 
-            function pausar(){
-
-            }
-
-            function parar(){
-
-            }
          
         })();
     

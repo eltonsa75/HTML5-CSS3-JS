@@ -99,6 +99,17 @@ BOM - Objeto screen
 .availableWidth / availableHeight
 .width / height
 
+=====================================================================================================
+
+Controlar o fluxo do programa
+
+return 
+break
+continue
+
+
+
+
 
 
 

@@ -37,11 +37,13 @@
             var rodando = false;
             
             function iniciar(){
+                if(rodando) return;
                 msClickIniciar = Date.now();
                 iniciarCronometro();
                 rodando = true;
             }
             function pausar(){
+                if(!$cronometro.value) return
                 if(rodando){
                 rodando = false;
                 clearInterval(intervalo);  
@@ -76,20 +78,25 @@
 
             function formataMs(ms){
 
+                const  MINUTO = 60 * 1000;
+
                 if(ms < 1000) {
                     return ms;
-                } else if(ms < 60000){
+                } else if(ms < MINUTO){
                     var s = ms/1000;
                     s = parseInt(s);
                     var c = ms - ( s  * 1000);
                     return s + ':' + c;
                 } else {
-                    var m = ms / ( 60000 )
+                    var m = ms / MINUTO;
                     m = parseInt(m);
-                    var s = ms / 1000 - ( m * 60);
-                    s = parseInt(s);
-                    var c = ms - (s * 1000) - ( m * 60 * 1000);
-                    return m + ':' + s + ':' + c;
+
+                    return m + ": " + formataMs( ms - m * MINUTO );
+
+                    // var s = ms / 1000 - ( m * 60);
+                    // s = parseInt(s);
+                    // var c = ms - (s * 1000) - ( m * MINUTO);
+                    // return m + ':' + s + ':' + c;
                 }
             }
 

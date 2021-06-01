@@ -45,6 +45,62 @@ clearInterval(id)
 
 Obs: Não são nativos da ECMAScript
 
-Em outras palavras, estão presente nos borwser "pendurados" em window.
+Em outras palavras, estão presente nos browser "pendurados" em window.
 Não estão disponíveis no nodeJS.
+
+
+======================================================================================================
+
+Bom - JavaScript
+
+innerWidth / innerHeight
+outerWidth / outerHeight
+opener
+pageXOffset / pageYOffset
+screenX / screenY
+
+BOM - Objeto History
+
+.leght,
+.go(),
+.back(),
+.forward()
+
+BOM - Objeto Location
+
+.hash
+.host
+.hostname
+.href
+.pathname
+.port
+.protocol
+.search
+
+Métodos Location
+
+.reload()
+.replace()
+.assign()
+
+BOM - Objeto Navigator
+
+.appName,
+appVersion,
+.userAgent,
+.platform
+.cookieEnabled
+.language
+.mimeTypes
+.plugins
+
+
+
+
+
+
+
+
+
+
 

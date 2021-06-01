@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Aula 01 de JavaScript</title>
+
+</head>
+<body>
+    <h1>
+        Curso JavaScritp Completo 2020
+    </h1>
+
+    <input type="text" id="cronometro">
+    <button id="iniciar">Iniciar</button>
+    <button id="pausar">Pausar</button>
+    <button id="parar">Parar</button>
+
+    <script>
+        
+        (function(){
+
+            var $cronometro = document.querySelector('#cronometro');
+            var $iniciar = document.querySelector('#iniciar');
+            var $pausar = document.querySelector('#pausar');
+            var $parar = document.querySelector('#parar');
+
+            $iniciar.addEventListener('click', iniciar);
+            $pausar.addEventListener('click', pausar);   
+            $parar.addEventListener('click', parar);
+
+            var msClickIniciar = 0;
+            
+            function iniciar(){
+                msClickIniciar = Date.now();
+                iniciarCronometro();
+            }
+
+            function iniciarCronometro(){
+                setInterval(function(){
+                    var msAgora = Date.now();
+                    var diferenca = msAgora - msClickIniciar;
+                    $cronometro.value = diferenca;
+                }, 100)
+            }
+
+            function pausar(){
+                    
+            }
+
+            function parar(){
+
+            }
+         
+        })();
+    
+
+    </script>
+</body>
+</html>

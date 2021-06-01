@@ -44,16 +44,15 @@
             }
             function pausar(){
                 if(!$cronometro.value) return
-                if(rodando){
-                rodando = false;
+                if(rodando){                
                 clearInterval(intervalo);  
                 msClickPausar = Date.now();
                 msTempoDecorrido += (msClickPausar - msClickIniciar);
-                } else{
-                    rodando = true;
+                } else{                    
                     msClickIniciar = Date.now();
                     iniciarCronometro(msTempoDecorrido);
                 }
+                rodando = !rodando;
             }
 
             function parar(){
@@ -92,11 +91,6 @@
                     m = parseInt(m);
 
                     return m + ": " + formataMs( ms - m * MINUTO );
-
-                    // var s = ms / 1000 - ( m * 60);
-                    // s = parseInt(s);
-                    // var c = ms - (s * 1000) - ( m * MINUTO);
-                    // return m + ':' + s + ':' + c;
                 }
             }
 

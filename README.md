@@ -94,6 +94,11 @@ appVersion,
 .mimeTypes
 .plugins
 
+BOM - Objeto screen
+
+.availableWidth / availableHeight
+.width / height
+
 
 
 

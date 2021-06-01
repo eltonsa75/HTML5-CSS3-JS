@@ -43,27 +43,33 @@
             }
             function pausar(){
                 if(rodando){
+                rodando = false;
                 clearInterval(intervalo);  
                 msClickPausar = Date.now();
                 msTempoDecorrido += (msClickPausar - msClickIniciar);
-                rodando = false;
                 } else{
-                    msClickIniciar = Date.now();
-                    iniciarCronometro();
                     rodando = true;
+                    msClickIniciar = Date.now();
+                    iniciarCronometro(msTempoDecorrido);
                 }
-
             }
 
             function parar(){
+                msClickIniciar = 0;
+                msClickIniciar = 0;
+                msTempoDecorrido = 0;
+                rodando = false;
+                clearInterval(intervalo);
+                $cronometro.value = '';
 
             }
 
-            function iniciarCronometro(){
-                setInterval(function(){
+            function iniciarCronometro(tempoDecorrido){
+            var _ms = tempoDecorrido || 0;
+                intervalo = setInterval(function(){
                     var msAgora = Date.now();
                     var diferenca = msAgora - msClickIniciar;
-                    $cronometro.value = diferenca;
+                    $cronometro.value = formataMs(diferenca + _ms);
                 }, 100)
             }
 
